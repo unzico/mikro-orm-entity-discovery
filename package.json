@@ -10,11 +10,11 @@
     "start": "node ./build/index.js",
     "dev": "ts-node-dev --transpile-only ./src/index.ts",
     "db": "docker run --rm -p 5432:5432 -e POSTGRES_PASSWORD=postgres postgres:14.10",
-    "dep:up": "yarn up -E \"@mikro-orm/*@6.2.8\"",
+    "dep:down": "yarn up -E \"@mikro-orm/*@6.2.1\"",
+    "dep:up": "yarn up -E \"@mikro-orm/*@6.2.2\"",
     "build": "rm -rf build/ && yarn run build:tsc && yarn run build:compile",
     "build:tsc": "tsc",
-    "build:compile": "babel ./src -d ./build -s --extensions \".js,.jsx,.ts,.tsx\" --ignore \"__tests__/*,__mocks__/*\"",
-    "dep:down": "yarn up -E \"@mikro-orm/*@6.2.7\""
+    "build:compile": "babel ./src -d ./build -s --extensions \".js,.jsx,.ts,.tsx\" --ignore \"__tests__/*,__mocks__/*\""
   },
   "devDependencies": {
     "@babel/cli": "7.24.1",
@@ -30,8 +30,8 @@
     "@babel/preset-react": "7.24.1",
     "@babel/preset-typescript": "7.24.1",
     "@babel/register": "7.23.7",
-    "@mikro-orm/cli": "6.2.2",
-    "@mikro-orm/reflection": "6.2.2",
+    "@mikro-orm/cli": "6.2.1",
+    "@mikro-orm/reflection": "6.2.1",
     "@types/node": "20.11.0",
     "babel-plugin-module-resolver": "5.0.2",
     "prettier": "3.1.1",
@@ -41,10 +41,10 @@
   },
   "dependencies": {
     "@babel/runtime": "7.24.4",
-    "@mikro-orm/core": "6.2.2",
-    "@mikro-orm/migrations": "6.2.2",
-    "@mikro-orm/postgresql": "6.2.2",
-    "@mikro-orm/reflection": "6.2.2",
+    "@mikro-orm/core": "6.2.1",
+    "@mikro-orm/migrations": "6.2.1",
+    "@mikro-orm/postgresql": "6.2.1",
+    "@mikro-orm/reflection": "6.2.1",
     "pg": "8.11.3"
   },
   "packageManager": "yarn@4.2.2"

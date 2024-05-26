@@ -3,7 +3,6 @@ import { Migrator } from "@mikro-orm/migrations";
 import { PostgreSqlDriver } from "@mikro-orm/postgresql";
 import { TsMorphMetadataProvider } from "@mikro-orm/reflection";
 import path from "node:path";
-import { User } from "./models/User";
 
 const config: Options<PostgreSqlDriver> = {
   metadataProvider: TsMorphMetadataProvider,
@@ -20,15 +19,11 @@ const config: Options<PostgreSqlDriver> = {
 };
 
 async function main() {
-  const orm = await MikroORM.init<PostgreSqlDriver>(config);
+  await MikroORM.init<PostgreSqlDriver>(config);
 
-  console.log("INFO - Refreshing database...");
-
-  // The following line will throw a SyntaxErrorException
-  // if we use @mikro-orm/*@6.2.8. All versions below v6.2.8 work fine.
-  await orm.schema.refreshDatabase();
-
-  console.log("INFO - Refreshed database.");
+  console.log(
+    "Hello there! If you can read this message, everything works fine :).",
+  );
 }
 
 main()
