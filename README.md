@@ -2,7 +2,7 @@
 
 This is a reproduction of a bug that occurs in version `6.2.2` of the **MikroORM** stack.
 
-Official issue:
+Official issue: https://github.com/mikro-orm/mikro-orm/issues/5602
 
 ## How To
 
